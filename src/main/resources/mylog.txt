@@ -1,0 +1,219 @@
+
+
+
+Apr 24, 2019 11:29:53 AM camarra.project.customerCRM.aspect.ExceptionHandlerController <init>
+INFO: working
+Apr 24, 2019 11:29:59 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:30:35 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:31:16 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:33:34 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:34:31 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:35:16 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:36:37 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:36:38 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:36:42 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:37:06 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:37:11 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:38:01 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statementorg.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:38:25 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement[Ljava.lang.StackTraceElement;@3fe06938
+
+Apr 24, 2019 11:38:26 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement[Ljava.lang.StackTraceElement;@4d0d33df
+
+Apr 24, 2019 11:38:30 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement[Ljava.lang.StackTraceElement;@6ae2fdea
+
+Apr 24, 2019 11:39:12 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:39:32 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:39:33 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:39:37 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:39:55 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:40:18 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:41:13 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:42:07 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:42:46 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:43:13 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:43:45 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:44:26 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:44:38 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:47:08 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:48:35 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:48:40 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:50:28 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleHibernateException
+WARNING: An error has occured: could not execute statement
+
+Apr 24, 2019 11:51:22 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleHibernateException
+WARNING: An error has occured: could not execute statement
+
+Apr 24, 2019 11:52:28 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleHibernateException
+WARNING: An error has occured: could not execute statement
+[Ljava.lang.StackTraceElement;@f3a7264
+
+Apr 24, 2019 11:52:57 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleHibernateException
+WARNING: An error has occured: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 11:59:09 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:59:47 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 11:59:53 AM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 12:04:52 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hassss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:10:42 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:11:58 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:18:04 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:21:08 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:22:24 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:22:44 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:25:52 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+org.hibernate.exception.SQLGrammarException: could not execute statement
+
+Apr 24, 2019 1:28:00 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:28:03 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:49:01 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:50:06 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:52:11 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:52:26 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:52:27 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:52:34 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:53:38 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:54:13 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:54:50 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:55:24 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:56:07 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:56:19 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error hasssssss occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+
+Apr 24, 2019 1:56:38 PM camarra.project.customerCRM.aspect.ExceptionHandlerController handleRuntimeExceptions
+WARNING: An error has occured: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+java.sql.SQLSyntaxErrorException: Unknown column 'iid' in 'where clause'
+

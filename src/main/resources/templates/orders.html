@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link rel="stylesheet" type="text/css" media="all"
+	th:href="@{/css/bootstrap.css}" />
+<style>
+</style>
+
+</head>
+
+<body>
+	<h1>CRM System</h1>
+	<hr>
+	<a th:href="@{/employee/customers}" class="btn btn-primary btn-lg">Customers</a>
+	<a th:href="@{/employee/products}" class="btn btn-primary btn-lg">Products</a>
+	<a th:href="@{/employee/orders}" class="btn btn-primary btn-lg">Orders</a>
+
+	<br>
+	<hr>
+	<!-- the th:text tag is like saying "if customer is not null, display this('?' sign). ELSE ":" display this -->
+	<h3 style="float: left; margin-bottom: 5pt;"
+		th:text="${customer !=null}? ${customer.firstName}+' '+${customer.lastName}: 'Orders'">Orders</h3>
+
+	<table class="table table-striped">
+		<tr>
+			<th>Order ID</th>
+			<th>Customer ID</th>
+			<th>Customer Name</th>
+			<th>Product Name</th>
+			<th>Order Date</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+
+		<tr th:each="customerOrder : ${orders}">
+			<td th:text="${customerOrder.id}" />
+			<td th:text="${customerOrder.Customer.id}" />
+			<td	th:text="${customerOrder.Customer.firstName}+' '+${customerOrder.Customer.lastName}" />
+			<td th:text="${customerOrder.Product.name}" />
+			<td th:text="${customerOrder.dateOfOrder}" />
+			<td th:text="${customerOrder.quantity}" />
+			<td th:text="${customerOrder.PriceOfOrder}" />
+
+			<td><a th:href="@{orders/deleteOrder/(id=${customerOrder.id})}"
+				onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+				| <a
+				th:href="@{/employee/orders/showFormForUpdate/(id=${customerOrder.id})}">Edit</a></td>
+		</tr>
+		<div th:if="${totalPrice !=null}" th:object="${totalPrice}">
+			<tr>
+				<td style="text-align: right; padding-right: 15%" colspan="8"
+					th:text="'Total: $ '+*{totalPrice}" />
+			</tr>
+		</div>
+
+	</table>
+</body>
+</html>

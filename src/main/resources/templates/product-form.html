@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" media="all"
+	th:href="@{/css/bootstrap.css}" />
+
+</head>
+<body>
+	<h1>CRM System</h1>
+	<hr>
+	<a th:href="@{/employee/customers}" class="btn btn-primary btn-lg">Customers</a>
+	<a th:href="@{/employee/products}" class="btn btn-primary btn-lg">Products</a>
+	<a href="@{/employee/orders" class="btn btn-primary btn-lg">Orders</a>
+
+	<br>
+	<hr>
+	<hr>
+
+	<form action="#" th:action="@{/employee/saveProduct}"
+		th:object="${product}" method="post">
+
+
+		<input type="hidden" th:field="*{id}">
+
+		<div class="form-group">
+			<label for="product-name"> Product Name</label> <input
+				class="form-control" type="text" id="product-name"
+				th:field="*{name}">
+		</div>
+
+		<div class="form-group">
+			<label for="product-code">Product Code </label> <input
+				class="form-control" type="text" id="product-code"
+				th:field="*{productCode}" />
+		</div>
+
+		<div class="form-group">
+			<label for="price-label">Price</label> <input class="form-control"
+				type="text" id="price-label" th:field="*{price}" />
+		</div>
+
+		<div class="form-group">
+			<input class="form-control" type="submit" value="Submit" />
+		</div>
+	</form>
+
+
+</body>
+</html>
