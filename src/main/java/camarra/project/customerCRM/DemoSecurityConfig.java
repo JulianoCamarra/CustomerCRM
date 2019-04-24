@@ -17,7 +17,6 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource securityDataSource;
 
-
 	//configure users (in memory, database, etc...)
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
