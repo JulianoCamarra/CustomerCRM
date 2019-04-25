@@ -24,7 +24,7 @@ public class CustomerController {
 	@Autowired
 	private CRMService service;
 
-	@GetMapping(value= {"/customers","localhost:8080/"})
+	@GetMapping(value="/customers")
 	public String customerPage(Model theModel) {
 		List<Customer> theCustomers = service.getCustomers();
 
