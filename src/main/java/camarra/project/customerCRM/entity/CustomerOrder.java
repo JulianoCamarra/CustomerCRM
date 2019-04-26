@@ -1,11 +1,12 @@
 package camarra.project.customerCRM.entity;
 
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name="customer_order")
@@ -34,8 +37,10 @@ public class CustomerOrder {
 	@Column(name="quantity")
 	private int quantity;
 	
-	@Column(name="date_of_order")
-	private Date dateOfOrder;
+	//@Column(name="date_of_order",columnDefinition="DATETIME default CURRENT_TIMESTAMP")
+	@CreationTimestamp
+	private LocalDate dateOfOrder;
+
 	
 	@Transient
 	private int productId;
@@ -44,13 +49,14 @@ public class CustomerOrder {
 	@Transient
 	private String customerFirstName;
 	
-	@Transient String customerLastName;
+	@Transient 
+	String customerLastName;
 	
 	public CustomerOrder() {
 		
 	}
 
-	public CustomerOrder(Customer customer, Product product, int quantity, Date dateOfOrder) {
+	public CustomerOrder(Customer customer, Product product, int quantity, LocalDate dateOfOrder) {
 		this.customer= customer;
 		this.product = product;
 		this.quantity = quantity;
@@ -89,11 +95,12 @@ public class CustomerOrder {
 		this.quantity = quantity;
 	}
 
-	public Date getDateOfOrder() {
+	public LocalDate getDateOfOrder() {
 		return dateOfOrder;
+		
 	}
 
-	public void setDateOfOrder(Date dateOfOrder) {
+	public void setDateOfOrder(LocalDate dateOfOrder) {
 		this.dateOfOrder = dateOfOrder;
 	}
 	

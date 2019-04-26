@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class RedirectController {
 	
-	
 	@GetMapping("/")
 	public String redirectToCustomerPage() {
 		
@@ -16,4 +15,3 @@ public class RedirectController {
 	}
 	
 }
-	

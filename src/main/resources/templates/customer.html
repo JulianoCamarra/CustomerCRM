@@ -43,8 +43,8 @@
 			<td th:text="${customer.address}" />
 			<td th:text="${customer.email}" />
 			<td th:text="${customer.telephone}"/>
-			<td><a th:href="@{showCustomerOrders/(id=${customer.id})}">view orders</a>
-				|
+			<td><a th:if="${not #lists.isEmpty(customer.orders)}" th:href="@{showCustomerOrders/(id=${customer.id})}" th:text="'view orders|'"></a>
+				
 				<a th:href="@{orders/showFormForAdd/(id=${customer.id})}">add order</a></td>
 	
 		
