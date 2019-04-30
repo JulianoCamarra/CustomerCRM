@@ -80,7 +80,8 @@ To get a local copy of Weather Finder up and running follow these simple example
  
  3. Go to the ```application.properties``` file, located under ```src/main/resources```
  4. type in the username of your database connection in ```spring.datasource.username={your_database_connection_username}```
- 5. type in the password of your database connection in ```spring.datasource.password={your_database_connection_password}
+ 
+ 5. type in the password of your database connection in ```spring.datasource.password={your_database_connection_password}```
  6. for ```spring.datasource.driverClassName```, you can specify the driver name of your database, or simply delete the configuration,
  as Spring Boot can determine the driver used for you.
  7.type in the url of your datasource in ```spring.datasource.url={your_database_connection_url}```. 
