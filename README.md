@@ -33,11 +33,10 @@
 CustomerCRM is a CRUD application that allows users to manage their customers, products, as well as orders, over a simple Bootstrap GUI design. 
 
 ### Built With
-*[Bootstrap](https://getbootstrap.com)
-*[Java](https://www.java.com/en/download/)
-*[MySql](https://www.mysql.com)
-*[Spring Framework](https://start.spring.io/)
-
+* [Bootstrap](https://getbootstrap.com)
+* [Java](https://www.java.com/en/download/)
+* [MySql](https://www.mysql.com)
+* [Spring Framework](https://start.spring.io/)
 
 
 <!-- GETTING STARTED -->
@@ -63,13 +62,19 @@ To get a local copy of Weather Finder up and running follow these simple example
 
 #### Create a new database
 1. Setup a new database schema with whatever name you choose
+
 2. create these five tables in your
- ```customer```,``` product```, ```customer_order```, ```users```, and ```authorities```
+ ```customer```,
+ ``` product```, 
+ ```customer_order```,
+ ```users```, 
+ and ```authorities```
+ 
 3. create a view named ```totalpricepercustomer```
  
- note: use ```users``` credentials to log into application
+ NOTE: use ```users``` credentials to log into application
  
- note: entries into ```authorities``` must begin with "ROLE_{your_role}"
+ NOTE: entries into ```authorities``` must begin with "ROLE_{your_role}"
  
  #### Setup database configuration properties
  
@@ -80,7 +85,7 @@ To get a local copy of Weather Finder up and running follow these simple example
  as Spring Boot can determine the driver used for you.
  7.type in the url of your datasource in ```spring.datasource.url={your_database_connection_url}```. 
  
- Remember, the pattern of a datasource
+     Remember, the pattern of a datasource
  url is ```jdbc:{your_sql_dialect}://{host_name}:{port_number}/{your_database_name}```
 
 
@@ -89,13 +94,13 @@ To get a local copy of Weather Finder up and running follow these simple example
 
 This application provides your basic CRUD features
 
-1) Add a customer, product, or order
+1)Add a customer, product, or order
 
 2)Retrieve a customer, product, or order
 
 3)Update a customer, product, or order
 
-4) Delete a customer, product, or order
+4)Delete a customer, product, or order
 
 
 It is also currently possible to retrieve every order made by a customer
