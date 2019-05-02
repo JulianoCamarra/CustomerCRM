@@ -28,7 +28,7 @@ Note: If testing my website, default username is "user" and default password is 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
- <img src="https://i.ibb.co/d474zZr/customercrm-screenshot.png">
+ <img src="https://i.ibb.co/2Z3vd1K/customercrm.png">
 CustomerCRM is a CRUD application that allows users to manage their customers, products, as well as orders, over a simple Bootstrap GUI design. 
 
 ### Built With
