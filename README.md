@@ -9,8 +9,7 @@
 
 
 <!-- PROJECT LOGO -->
-
-
+Note: If testing my website, default username is "user" and default password is "password"
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
