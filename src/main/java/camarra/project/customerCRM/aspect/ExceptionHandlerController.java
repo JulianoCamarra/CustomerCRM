@@ -7,13 +7,18 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import org.hibernate.HibernateException;
-
+import org.hibernate.exception.GenericJDBCException;
+import org.hibernate.hql.internal.ast.QuerySyntaxException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.NoHandlerFoundException;
+import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver;
 
 @ControllerAdvice
 @RequestMapping("/")
@@ -55,20 +60,21 @@ public class ExceptionHandlerController {
 
 		return "testing";
 
-	}
+	} 
 
 	// handle any hibernate exceptions
 	@ExceptionHandler(HibernateException.class)
 	public String handleHibernateException(HibernateException exc, Model theModel) {
 		// "\r\n" means new line when writing to a file
 		String message = "An error has occured: " + exc.getLocalizedMessage() + "\r\n";
-
+		System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
 		myLogger.warning(message);
 
 		theModel.addAttribute("exception", message);
 
 		return "testing";
 	}
+	
 
 	// handle any other runtime/unchecked exception and log it
 
@@ -78,13 +84,15 @@ public class ExceptionHandlerController {
 		if (exc instanceof HibernateException) {
 			
 			return handleHibernateException((HibernateException) exc.getCause(),theModel);
-		}
+		}  
+		
 		String message = "An error has occured: " + exc.getLocalizedMessage() + "\n"
 				+ exc.getCause().getCause().toString() + "\r\n";
 		myLogger.warning(message);
 
 		theModel.addAttribute("exception", message);
 
+		System.out.println("POOOOOOOOOOOOOOOOOOOOOPOOOOO");
 		return "testing";
-	}
+	} 
 }

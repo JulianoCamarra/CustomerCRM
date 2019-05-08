@@ -6,15 +6,7 @@
 
 </head>
 <body>
-	<h1>CRM System</h1>
-	<hr>
-	<a th:href="@{/employee/customers}" class="btn btn-primary btn-lg">Customers</a>
-	<a th:href="@{/employee/products}" class="btn btn-primary btn-lg">Products</a>
-	<a th:href="@{/employee/orders}" class="btn btn-primary btn-lg">Orders</a>
-
-	<br>
-	<hr>
-	<hr>
+	<div th:insert="includes/header"></div>
 
 	<form action="#" th:action="@{/employee/saveProduct}"
 		th:object="${product}" method="post">
