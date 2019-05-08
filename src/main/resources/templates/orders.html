@@ -10,14 +10,8 @@
 </head>
 
 <body>
-	<h1>CRM System</h1>
-	<hr>
-	<a th:href="@{/employee/customers}" class="btn btn-primary btn-lg">Customers</a>
-	<a th:href="@{/employee/products}" class="btn btn-primary btn-lg">Products</a>
-	<a th:href="@{/employee/orders}" class="btn btn-primary btn-lg">Orders</a>
-
-	<br>
-	<hr>
+	<div th:insert="includes/header"></div>
+	
 	<!-- the th:text tag is like saying "if customer is not null, display this('?' sign). ELSE ":" display this -->
 	<h3 style="float: left; margin-bottom: 5pt;"
 		th:text="${customer !=null}? ${customer.firstName}+' '+${customer.lastName}: 'Orders'">Orders</h3>

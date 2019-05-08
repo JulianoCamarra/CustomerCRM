@@ -10,15 +10,7 @@
 </head>
 
 <body>
-	<h1>CRM System</h1>
-	<hr>
-	<a href="javascript:window.location.reload(true)"
-		class="btn btn-primary btn-lg">Customers</a>
-	<a th:href="@{products}" class="btn btn-primary btn-lg">Products</a>
-	<a th:href="@{orders}" class="btn btn-primary btn-lg">Orders</a>
-
-	<br>
-	<hr>
+	<div th:insert="includes/header"></div>
 	<h3 style="float: left; margin: 0;">Customers</h3>
 
 	<a th:href="@{showFormForAdd}" class="btn btn-primary"

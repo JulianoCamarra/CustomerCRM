@@ -15,7 +15,7 @@ import camarra.project.customerCRM.entity.Product;
 import camarra.project.customerCRM.service.CRMService;
 
 @Controller
-@RequestMapping("/employee")
+@RequestMapping("employee/")
 public class ProductController {
 
 	@Autowired
