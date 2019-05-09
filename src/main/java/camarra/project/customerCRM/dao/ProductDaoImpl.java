@@ -84,7 +84,8 @@ public class ProductDaoImpl implements ProductDao {
 						 + "productCode=:searchKey OR " 
 						 + "name LIKE:nameSearchKey",
 						   Product.class)
-					.setParameter("IdKey", idKey).setParameter("searchKey", searchKey)
+					.setParameter("idKey", idKey)
+					.setParameter("searchKey", searchKey)
 					.setParameter("nameSearchKey", "%" + searchKey + "%");
 
 		return theQuery.getResultList();

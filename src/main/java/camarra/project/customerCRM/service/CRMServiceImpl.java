@@ -133,17 +133,16 @@ public class CRMServiceImpl implements CRMService {
 
 	}
 
-	
-	@Override
-	@Transactional
-	public List<Customer> customerSearch(String searchKey) {
-		
-		return customerRepo.customerSearch(searchKey);
-	}
-
 	@Override
 	public List<Product> productSearch(String searchKey) {
 		
 		return productRepo.productSearch(searchKey);
 	}
+
+	@Override
+	public List<Customer> customerSearch(String searchKey) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
