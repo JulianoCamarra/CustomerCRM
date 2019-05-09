@@ -59,7 +59,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 		Session currentSession = entityManager.unwrap(Session.class);
 
-		Query theQuery = currentSession.createQuery("delete from Customer where iid=: customerId")
+		Query theQuery = currentSession.createQuery("delete from Customer where id=: customerId")
 				.setParameter("customerId", theId);
 
 		theQuery.executeUpdate();
@@ -73,7 +73,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		Query theQuery = currentSession.createQuery("delete from Customer where id in (:ids)").setParameter("ids",
 				theIds);
 
-		int result=theQuery.executeUpdate();
+		int result = theQuery.executeUpdate();
 	}
 
 	public List<CustomerOrder> getCustomersFromOrder() {
@@ -128,16 +128,32 @@ public class CustomerDaoImpl implements CustomerDao {
 		return customerPrice;
 	}
 
-	public Customer findCustomerByFirstAndLastName(String first, String last) {
+	public List<Customer> customerSearch(String searchKey) {
+
+		String firstSearchKey = "";
+		String secondSearchKey = "";
+
+		// if user enters both first and last name in search bar, we split them up
+
+		String[] multipleKeysInSearch = searchKey.split(" ");
+		firstSearchKey += multipleKeysInSearch[0];
+
+		// check if user typed both first AND last name
+		if (multipleKeysInSearch.length > 1) {
+			secondSearchKey += multipleKeysInSearch[1];
+		}
 
 		Session currentSession = entityManager.unwrap(Session.class);
 
-		Query<Customer> query = currentSession
-				.createQuery("FROM Customer where firstName= :firstName AND lastName= :lastName", Customer.class)
-				.setParameter("firstName", first).setParameter("lastName", last);
+		Query<Customer> query = currentSession.createQuery(
+				"FROM Customer where (firstName= :firstSearchKey AND lastName=:secondSearchKey) OR (firstName=:secondSearchKey AND lastName=:firstSearchKey) "
+						+ "OR (firstName=:firstSearchKey)" + "OR (firstName=:secondSearchKey)"
+						+ "OR (lastName=:firstSearchKey)" + "OR (lastName=:secondSearchKey)",Customer.class)
+				.setParameter("firstSearchKey", firstSearchKey)
+				.setParameter("secondSearchKey", secondSearchKey);
 
-		Customer theCustomer = query.getSingleResult();
-		return theCustomer;
+		List<Customer> theCustomers = query.getResultList();
+		return theCustomers;
 
 	}
 

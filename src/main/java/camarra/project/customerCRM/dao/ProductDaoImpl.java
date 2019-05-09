@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.NumberUtils;
 
 import camarra.project.customerCRM.entity.Product;
 
@@ -61,18 +62,33 @@ public class ProductDaoImpl implements ProductDao {
 
 		theQuery.executeUpdate();
 	}
-	
-	public Product findProductByName(String name) {
-		
-		Session currentSession= entityManager.unwrap(Session.class);
-		
-		Query<Product> theQuery = currentSession.createQuery("FROM Product where name=: productName")
-						.setParameter("productName", name);
-		
-		Product theProduct= theQuery.getSingleResult();
-		
-		return theProduct;
+
+	@Override
+	public List<Product> productSearch(String searchKey) {
+
+		/*
+		 * if user enters a product number, we can search for it by initializing an int
+		 * and parsing it and then adding it to the query parameter
+		 */
+		int idKey = 0;
+
+		if (searchKey.matches("[0-9]+")) {
+			idKey = Integer.parseInt(searchKey);
+		}
+
+		Session currentSession = entityManager.unwrap(Session.class);
+
+		Query<Product> theQuery = currentSession
+				.createQuery(
+						"FROM Product where id=:idKey OR " 
+						 + "productCode=:searchKey OR " 
+						 + "name LIKE:nameSearchKey",
+						   Product.class)
+					.setParameter("IdKey", idKey).setParameter("searchKey", searchKey)
+					.setParameter("nameSearchKey", "%" + searchKey + "%");
+
+		return theQuery.getResultList();
+
 	}
-		
-	
+
 }

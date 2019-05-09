@@ -22,5 +22,5 @@ public interface CustomerDao {
 	
 	public List<TotalPriceView> getTotalPricePerCustomer();
 	
-	public Customer findCustomerByFirstAndLastName(String first, String last);
+	public List<Customer> customerSearch(String searchKey);
 }

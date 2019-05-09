@@ -18,7 +18,7 @@ import camarra.project.customerCRM.entity.TotalPriceView;
 import camarra.project.customerCRM.service.CRMService;
 
 @Controller
-@RequestMapping("employee/")
+@RequestMapping("employee")
 public class CustomerController {
 
 	@Autowired
@@ -51,7 +51,7 @@ public class CustomerController {
 		return "customer";
 	}
 
-	@PostMapping("saveCustomer")
+	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 
 		service.saveCustomer(theCustomer);
@@ -102,5 +102,13 @@ public class CustomerController {
 
 	}
 	
-	
+	@GetMapping("customers/search")
+	public String testing(@RequestParam("search") String searchKey, Model theModel) {
+		
+		List<Customer> customers= service.customerSearch(searchKey);
+		
+		theModel.addAttribute("customers", customers);
+		
+		return "customer";
+}
 }
