@@ -141,8 +141,8 @@ public class CRMServiceImpl implements CRMService {
 
 	@Override
 	public List<Customer> customerSearch(String searchKey) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return customerRepo.customerSearch(searchKey);
 	}
 
 }
