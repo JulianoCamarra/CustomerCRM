@@ -15,13 +15,13 @@ import camarra.project.customerCRM.entity.Product;
 import camarra.project.customerCRM.service.CRMService;
 
 @Controller
-@RequestMapping("employee/")
+@RequestMapping("employee")
 public class ProductController {
 
 	@Autowired
 	CRMService service;
 
-	@GetMapping("/products")
+	@GetMapping("products")
 	public String productsPage(Model theModel) {
 		List<Product> theProducts = service.getProducts();
 
@@ -31,40 +31,50 @@ public class ProductController {
 		return "product";
 	}
 
-	@PostMapping("/saveProduct")
+	@PostMapping("products/saveProduct")
 	public String saveProduct(@ModelAttribute("product") Product theProduct) {
-		
+
 		service.saveProduct(theProduct);
-		
+
 		return "redirect:/employee/products";
 
 	}
 
-	@GetMapping("/product/showFormForAdd")
+	@GetMapping("products/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 
 		Product theProduct = new Product();
 		theModel.addAttribute("product", theProduct);
-		
+
 		return "product-form";
 
 	}
-	
-	@GetMapping("/products/showFormForUpdate")
+
+	@GetMapping("products/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("id") int theId, Model theModel) {
-		
-		Product theProduct= service.getProduct(theId);
+
+		Product theProduct = service.getProduct(theId);
 		theModel.addAttribute("product", theProduct);
-		
+
 		return "product-form";
 	}
+
+	@GetMapping("products/delete")
+	public String deleteProduct(@RequestParam("id") int theId) {
+
+		service.deleteProduct(theId);
+
+		return "redirect:/employee/products";
+	}
+
+	@GetMapping("products/search")
+	public String searchProduct(@RequestParam("search") String searchKey, Model theModel) {
 		
-		@GetMapping("/products/delete")
-		public String deleteProduct(@RequestParam("id") int theId) {
+		List<Product> theSearchedProducts= service.productSearch(searchKey);
+			theModel.addAttribute("products", theSearchedProducts);
 			
-			service.deleteProduct(theId);
-			
-			return "redirect:/employee/products";
+			return "product";
 		}
 	
 }
+

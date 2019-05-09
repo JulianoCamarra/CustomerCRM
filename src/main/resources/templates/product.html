@@ -14,9 +14,13 @@
 
 	<h3 style="float: left; margin: 0;">Product</h3>
 
-	<a th:href="@{product/showFormForAdd}" class="btn btn-primary"
+	<a th:href="@{products/showFormForAdd}" class="btn btn-primary"
 		style="float: left; margin-left: 1%; text-align: center; padding-right: 20pt; padding-left: 20pt; margin-bottom: 5pt;">Add</a>
-
+	
+	<form action="#" th:action="@{/employee/products/search}" method="get">
+		<input style="float:right;width:15%;margin-right:10%;"class="form-control" type="submit" value="Search Product"/>
+		<input style="float:right;width:20%;"class="form-control" type="search" name="search">
+	</form>
 
 	<table class="table table-striped">
 		<tr>

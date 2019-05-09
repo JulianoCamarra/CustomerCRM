@@ -58,9 +58,8 @@ public class ExceptionHandlerController {
 		String message = exc.getLocalizedMessage();
 		theModel.addAttribute("exception", message);
 
-		return "testing";
-
-	} 
+		return "exception";
+	}
 
 	// handle any hibernate exceptions
 	@ExceptionHandler(HibernateException.class)
@@ -72,9 +71,8 @@ public class ExceptionHandlerController {
 
 		theModel.addAttribute("exception", message);
 
-		return "testing";
+		return "exception";
 	}
-	
 
 	// handle any other runtime/unchecked exception and log it
 
@@ -82,17 +80,16 @@ public class ExceptionHandlerController {
 	public String handleRuntimeExceptions(RuntimeException exc, Model theModel) {
 
 		if (exc instanceof HibernateException) {
-			
-			return handleHibernateException((HibernateException) exc.getCause(),theModel);
-		}  
-		
+
+			return handleHibernateException((HibernateException) exc.getCause(), theModel);
+		}
+
 		String message = "An error has occured: " + exc.getLocalizedMessage() + "\n"
 				+ exc.getCause().getCause().toString() + "\r\n";
 		myLogger.warning(message);
 
 		theModel.addAttribute("exception", message);
 
-		System.out.println("POOOOOOOOOOOOOOOOOOOOOPOOOOO");
-		return "testing";
-	} 
+		return "exception";
+	}
 }

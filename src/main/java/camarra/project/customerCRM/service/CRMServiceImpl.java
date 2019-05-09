@@ -133,15 +133,17 @@ public class CRMServiceImpl implements CRMService {
 
 	}
 
+	
 	@Override
-	public Product findProductByName(String name) {
-
-		return productRepo.findProductByName(name);
-
+	@Transactional
+	public List<Customer> customerSearch(String searchKey) {
+		
+		return customerRepo.customerSearch(searchKey);
 	}
 
 	@Override
-	public Customer findCustomerByFirstAndLastName(String first, String last) {
-		 return customerRepo.findCustomerByFirstAndLastName(first, last);
+	public List<Product> productSearch(String searchKey) {
+		
+		return productRepo.productSearch(searchKey);
 	}
 }

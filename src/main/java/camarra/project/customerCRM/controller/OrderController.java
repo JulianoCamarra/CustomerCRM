@@ -16,13 +16,13 @@ import camarra.project.customerCRM.entity.Product;
 import camarra.project.customerCRM.service.CRMService;
 
 @Controller
-@RequestMapping("/employee")
+@RequestMapping("employee")
 public class OrderController {
 
 	@Autowired
 	private CRMService service;
 
-	@GetMapping("/orders")
+	@GetMapping("orders")
 	public String orderPage(Model theModel) {
 
 		List<CustomerOrder> theOrders = service.getCustomerOrders();
@@ -32,7 +32,7 @@ public class OrderController {
 		return "orders";
 	}
 
-	@PostMapping("/saveOrder")
+	@PostMapping("saveOrder")
 	public String saveOrder(@ModelAttribute("order") CustomerOrder theOrder) {
 
 		System.out.println(theOrder.getCustomer());
@@ -45,7 +45,7 @@ public class OrderController {
 		return "redirect:/employee/orders";
 	}
 	
-	@GetMapping("/orders/showFormForUpdate")
+	@GetMapping("orders/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("id") int customerId, Model theModel) {
 		
 		CustomerOrder theOrder= service.getCustomerOrder(customerId);
@@ -60,7 +60,7 @@ public class OrderController {
 		return "order-form";
 	}
 
-	@GetMapping("/orders/showFormForAdd/")
+	@GetMapping("orders/showFormForAdd/")
 	public String addOrderToCustomer(@RequestParam("id") int customerId, Model theModel) {
 
 		CustomerOrder newOrder = new CustomerOrder();
@@ -73,7 +73,7 @@ public class OrderController {
 		return "order-form";
 	}
 	
-	@GetMapping("/orders/deleteOrder")
+	@GetMapping("orders/deleteOrder")
 	public String deleteOrder(@RequestParam("id") int orderId) {
 		
 		service.deleteCustomerOrder(orderId);
