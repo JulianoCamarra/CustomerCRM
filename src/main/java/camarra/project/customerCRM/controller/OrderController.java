@@ -32,7 +32,7 @@ public class OrderController {
 		return "orders";
 	}
 
-	@PostMapping("saveOrder")
+	@PostMapping("orders/saveOrder")
 	public String saveOrder(@ModelAttribute("order") CustomerOrder theOrder) {
 
 		System.out.println(theOrder.getCustomer());
@@ -60,7 +60,7 @@ public class OrderController {
 		return "order-form";
 	}
 
-	@GetMapping("orders/showFormForAdd/")
+	@GetMapping("orders/showFormForAdd")
 	public String addOrderToCustomer(@RequestParam("id") int customerId, Model theModel) {
 
 		CustomerOrder newOrder = new CustomerOrder();
