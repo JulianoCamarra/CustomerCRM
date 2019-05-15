@@ -8,7 +8,7 @@
 <body>
 	<div th:insert="includes/header"></div>
 	
-	<form action="#" th:action="@{/employee/saveOrder}" th:object="${order}"
+	<form action="#" th:action="@{/employee/orders/saveOrder}" th:object="${order}"
 		method="post">
 
 		<input type="hidden" th:field="*{id}"/>
