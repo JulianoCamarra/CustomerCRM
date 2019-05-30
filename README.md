@@ -41,7 +41,7 @@ CustomerCRM is a CRUD application that allows users to manage their customers, p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy of Weather Finder up and running follow these simple example steps.
+To get a local copy of CustomerCRM up and running follow these simple example steps.
 
 1) Open your terminal
 
