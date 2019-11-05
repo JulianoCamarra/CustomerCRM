@@ -7,44 +7,42 @@
 </head>
 <body>
 	<div th:insert="includes/header"></div>
-	
-	<form action="#" th:action="@{/employee/saveCustomer}" th:object="${customer}"
-		method="post">
 
-		<input type="hidden" th:field="*{enabled}" th:value="true" />
-		<input type="hidden" th:field="*{id}">
-		
+	<form action="#" th:action="@{/employee/saveCustomer}"
+		th:object="${customer}" method="post">
+
+		<input type="hidden" th:field="*{enabled}" th:value="true" /> <input
+			type="hidden" th:field="*{id}">
+
 		<div class="form-group">
-			<label for="first-name"> First Name</label> 
-			<input class="form-control" type="text"
-				id="first-name" th:field="*{firstName}">
+			<label for="first-name"> First Name</label> <input
+				class="form-control" type="text" id="first-name"
+				th:field="*{firstName}">
 		</div>
 
 		<div class="form-group">
-			<label for="last-name">Last Name</label> 
-			<input class="form-control" type="text"
-				id="last-name" th:field="*{lastName}" />
+			<label for="last-name">Last Name</label> <input class="form-control"
+				type="text" id="last-name" th:field="*{lastName}" />
 		</div>
 
 		<div class="form-group">
-			<label for="address-label">Address</label> 
-			<input class="form-control" type="text" id="address-label"
+			<label for="address-label">Address</label> <input
+				class="form-control" type="text" id="address-label"
 				th:field="*{address}" />
 		</div>
 
 		<div class="form-group">
-			<label for="email-label">Email</label> 
-			<input class="form-control" type="text" id="email-group"
-				th:field="*{email}" />
+			<label for="email-label">Email</label> <input class="form-control"
+				type="text" id="email-group" th:field="*{email}" />
 		</div>
 		<div class="form-group">
-			<label for="telephone-label">Telephone</label> 
-			<input class="form-control" type="text"
-				id="telephone-label" th:field="*{telephone}" />
+			<label for="telephone-label">Telephone</label> <input
+				class="form-control" type="text" id="telephone-label"
+				th:field="*{telephone}" />
 		</div>
-			<div class="form-group">
-				<input class="form-control"type="submit" value="Submit" />
-			</div>
+		<div class="form-group">
+			<input class="form-control" type="submit" value="Submit" />
+		</div>
 	</form>
 
 

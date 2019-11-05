@@ -15,16 +15,18 @@
 
 	<a th:href="@{showFormForAdd}" class="btn btn-primary"
 		style="float: left; margin-left: 1%; text-align: center; padding-right: 20pt; padding-left: 20pt; margin-bottom: 5pt;">Add</a>
-		
-		<!-- because we are re-using the same "customer" template to show search results,
+
+	<!-- because we are re-using the same "customer" template to show search results,
 			we have to be explicit in using the full search path or else we will just be appending
 			"search" to each new search we perform FROM the customers/search page"
 		 -->
 	<form action="#" th:action="@{/employee/customers/search}" method="get">
-		<input style="float:right;width:15%;'"class="form-control" type="submit" value="Search Customer"/>
-		<input style="float:right;width:20%;"class="form-control" type="search" name="search">
-	
-		</form>
+		<input style="float: right; width: 15%;'" class="form-control"
+			type="submit" value="Search Customer" /> <input
+			style="float: right; width: 20%;" class="form-control" type="search"
+			name="search">
+
+	</form>
 	<table class="table table-striped">
 		<tr>
 			<th>Customer ID</th>
@@ -37,18 +39,19 @@
 			<th>Action</th>
 		</tr>
 
-		<tr th:each="customer : ${customers}">			
+		<tr th:each="customer : ${customers}">
 			<td th:text="${customer.id}" />
 			<td th:text="${customer.lastName}" />
 			<td th:text="${customer.firstName}" />
 			<td th:text="${customer.address}" />
 			<td th:text="${customer.email}" />
-			<td th:text="${customer.telephone}"/>
-			<td><a th:if="${not #lists.isEmpty(customer.orders)}" th:href="@{showCustomerOrders/(id=${customer.id})}" th:text="'view orders | '"></a>
-				
-				<a th:href="@{orders/showFormForAdd/(id=${customer.id})}">add order</a></td>
-	
-		
+			<td th:text="${customer.telephone}" />
+			<td><a th:if="${not #lists.isEmpty(customer.orders)}"
+				th:href="@{showCustomerOrders/(id=${customer.id})}"
+				th:text="'view orders | '"></a> <a
+				th:href="@{orders/showFormForAdd/(id=${customer.id})}">add order</a></td>
+
+
 			<!-- 
 			If you want to send data through PATH VARIABLE, use this
 			<td><a th:href="@{/delete/{id} (id=${customer.id})}"
