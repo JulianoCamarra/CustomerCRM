@@ -18,8 +18,6 @@ import camarra.project.customerCRM.entity.TotalPriceView;
 public class CustomerDaoImpl implements CustomerDao {
 
 	private EntityManager entityManager;
-	@Autowired
-	private SessionFactory sessionFactory;
 
 	@Autowired
 	public CustomerDaoImpl(EntityManager entityManager) {
