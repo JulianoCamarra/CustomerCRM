@@ -45,14 +45,12 @@ public class CRMServiceImpl implements CRMService {
 	public Customer getCustomer(int theId) {
 
 		return customerRepo.getCustomer(theId);
-
 	}
 
 	@Override
 	@Transactional
 	public void deleteCustomer(int theId) {
 		customerRepo.deleteCustomer(theId);
-
 	}
 
 	@Override
@@ -108,7 +106,6 @@ public class CRMServiceImpl implements CRMService {
 	public void deleteCustomerOrder(int theId) {
 
 		customerOrderRepo.deleteCustomerOrder(theId);
-
 	}
 
 	@Override
@@ -130,7 +127,6 @@ public class CRMServiceImpl implements CRMService {
 	public List<TotalPriceView> getTotalPricePerCustomer() {
 
 		return customerRepo.getTotalPricePerCustomer();
-
 	}
 
 	@Override
@@ -144,5 +140,4 @@ public class CRMServiceImpl implements CRMService {
 		
 		return customerRepo.customerSearch(searchKey);
 	}
-
 }

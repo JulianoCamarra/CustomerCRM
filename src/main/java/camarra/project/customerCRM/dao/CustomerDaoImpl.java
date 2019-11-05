@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,6 +18,8 @@ import camarra.project.customerCRM.entity.TotalPriceView;
 public class CustomerDaoImpl implements CustomerDao {
 
 	private EntityManager entityManager;
+	@Autowired
+	private SessionFactory sessionFactory;
 
 	@Autowired
 	public CustomerDaoImpl(EntityManager entityManager) {
@@ -28,7 +31,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	// CALLING Customer.getOrders
 	@Transactional
 	public Customer getCustomer(int customerId) {
-
+		
 		Session currentSession = entityManager.unwrap(Session.class);
 
 		Customer theCustomer = currentSession.get(Customer.class, customerId);
@@ -83,14 +86,13 @@ public class CustomerDaoImpl implements CustomerDao {
 		Query<CustomerOrder> theQuery = currentSession.createQuery("FROM CustomerOrder", CustomerOrder.class);
 		List<CustomerOrder> customers = theQuery.getResultList();
 
-		System.out.println(customers);
-
 		return customers;
 
 	}
 
-	// GETTING CUSTOMER'S ORDERS BY CALLING CustomerOrder and using "WHERE
-	// customer.id=: id passed through parameter!
+	/* GETTING CUSTOMER'S ORDERS BY CALLING CustomerOrder and using "WHERE
+	 *customer.id=: id passed through parameter!
+	 */
 	public List<CustomerOrder> getOrdersMadeByCustomer(int customerId) {
 
 		Session currentSession = entityManager.unwrap(Session.class);
@@ -99,10 +101,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				.createQuery("FROM CustomerOrder where customer.id= :customerId", CustomerOrder.class)
 				.setParameter("customerId", customerId);
 
-		List<CustomerOrder> orders = query.getResultList();
-
-		return orders;
-
+		return query.getResultList();
 	}
 
 	public List<TotalPriceView> getTotalPricePerCustomer() {
@@ -113,7 +112,6 @@ public class CustomerDaoImpl implements CustomerDao {
 		List<TotalPriceView> pricePerCustomerList = theQuery.getResultList();
 
 		return pricePerCustomerList;
-
 	}
 
 	public TotalPriceView getCustomerTotalPrice(int customerId) {
@@ -134,14 +132,12 @@ public class CustomerDaoImpl implements CustomerDao {
 		String secondSearchKey = "";
 
 		// if user enters both first and last name in search bar, we split them up
-
 		String[] multipleKeysInSearch = searchKey.split(" ");
 		firstSearchKey += multipleKeysInSearch[0];
 
 		// check if user typed both first AND last name
-		if (multipleKeysInSearch.length > 1) {
+		if (multipleKeysInSearch.length > 1)
 			secondSearchKey += multipleKeysInSearch[1];
-		}
 
 		Session currentSession = entityManager.unwrap(Session.class);
 
@@ -152,9 +148,6 @@ public class CustomerDaoImpl implements CustomerDao {
 				.setParameter("firstSearchKey", firstSearchKey)
 				.setParameter("secondSearchKey", secondSearchKey);
 
-		List<Customer> theCustomers = query.getResultList();
-		return theCustomers;
-
+		return query.getResultList();
 	}
-
 }

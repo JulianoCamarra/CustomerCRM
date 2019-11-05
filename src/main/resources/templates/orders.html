@@ -11,7 +11,7 @@
 
 <body>
 	<div th:insert="includes/header"></div>
-	
+
 	<!-- the th:text tag is like saying "if customer is not null, display this('?' sign). ELSE ":" display this -->
 	<h3 style="float: left; margin-bottom: 5pt;"
 		th:text="${customer !=null}? ${customer.firstName}+' '+${customer.lastName}: 'Orders'">Orders</h3>
@@ -31,7 +31,8 @@
 		<tr th:each="customerOrder : ${orders}">
 			<td th:text="${customerOrder.id}" />
 			<td th:text="${customerOrder.Customer.id}" />
-			<td	th:text="${customerOrder.Customer.firstName}+' '+${customerOrder.Customer.lastName}" />
+			<td
+				th:text="${customerOrder.Customer.firstName}+' '+${customerOrder.Customer.lastName}" />
 			<td th:text="${customerOrder.Product.name}" />
 			<td th:text="${customerOrder.dateOfOrder}" />
 			<td th:text="${customerOrder.quantity}" />
